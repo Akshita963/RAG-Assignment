@@ -94,9 +94,11 @@ Then: "Tell me more about that."
 ✅ Memory is managed by LangChain's ConversationBufferMemory.
 
 ### 🧪 Run Unit Tests and Docker Support(Bonus):
-$env:PYTHONPATH="."     # (Windows)
-pytest
-✅ This checks PDF parsing, embedding, and retrieval pipeline.
+
+Unit test :
+ $env:PYTHONPATH="."     # (Windows)
+ pytest
+ ✅ This checks PDF parsing, embedding, and retrieval pipeline.
 
 🐳 Docker Support :
 Although Docker wasn't run on my system due to local limitations,
