@@ -37,7 +37,7 @@ Traditional LLMs like ChatGPT can't access custom documents.
 
 ## 🛠️ How to Run Locally
 
-### 1. Clone the repo & install dependencies
+###  Clone the repo , install the dependencies and then test it.
 
 ```bash
 git clone https://github.com/Akshita963/RAG-Assignment.git
