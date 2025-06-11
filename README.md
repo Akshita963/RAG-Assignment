@@ -108,15 +108,6 @@ docker build -t rag-app .
 docker run -p 8000:8000 rag-app
 Then open: http://localhost:8000/docs
 
-📂 Folder Structure:
-├── app/                  # Main application code
-├── documents/            # User documents (PDFs)
-├── vector_store/         # FAISS DB storage
-├── tests/                # Unit tests
-├── Dockerfile            # Containerization support
-├── .env.example          # Env file sample
-├── requirements.txt      # Dependencies
-└── README.md             # Project documentation
 
 ✅ Summary:
 - FastAPI + LangChain-based RAG chatbot
