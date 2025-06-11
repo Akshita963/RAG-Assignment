@@ -37,9 +37,8 @@ Traditional LLMs like ChatGPT can't access custom documents.
 
 ## 🛠️ How to Run Locally
 
-###  Clone the repo , install the dependencies and then test it.
+### 1. Clone the repo and install the dependencies
 
-```bash
 git clone https://github.com/Akshita963/RAG-Assignment.git
 cd RAG-Assignment
 python -m venv venv
@@ -55,7 +54,7 @@ Place your PDFs inside the documents/ folder.
 uvicorn app.main:app --reload
 
 
-💬 Sample API Usage:
+### 💬 Sample API Usage:
 
 Endpoint: /chat (POST)
 
@@ -77,7 +76,7 @@ Response:
 }
 
 
-🧠 How It Works:
+### 🧠 How It Works:
 
 PDFs are parsed and split into small text chunks
 Each chunk is converted into a vector (embedding)
@@ -86,7 +85,7 @@ User question is embedded and compared to the stored chunks
 Top results are passed to the LLM to generate an answer
 System returns answer + source page info
 
-🔁 Conversational Memory:
+### 🔁 Conversational Memory:
 
 The system remembers past questions within a session.
 Example:
@@ -94,12 +93,12 @@ Ask: "Summarize the document."
 Then: "Tell me more about that."
 ✅ Memory is managed by LangChain's ConversationBufferMemory.
 
-🧪 Run Unit Tests:
+### 🧪 Run Unit Tests and Docker Support(Bonus):
 $env:PYTHONPATH="."     # (Windows)
 pytest
 ✅ This checks PDF parsing, embedding, and retrieval pipeline.
 
-🐳 Docker Support (Bonus):
+🐳 Docker Support :
 Although Docker wasn't run on my system due to local limitations,
 a complete and working Dockerfile is included:
 
