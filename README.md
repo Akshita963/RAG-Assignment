@@ -1,28 +1,57 @@
-# RAG Assignment Solution - Aelum Consulting
+# 📚 Retrieval-Augmented Generation (RAG) Chatbot — Assignment
 
-## Project Summary
+A document-aware chatbot built using **LangChain**, **HuggingFace**, **FAISS**, and **FastAPI**.
 
-This is a RAG-based chatbot system that can answer questions from a set of provided documents (PDFs).  
-It uses a Vector Store + LLM (GPT-3.5) with conversational memory.
-
-### Features
-
-✅ Document parsing and chunking  
-✅ Embeddings stored in FAISS  
-✅ Conversational Memory  
-✅ API endpoint (`/chat`)  
-✅ References with page numbers  
-✅ Unit tests  
-✅ Async API  
-✅ Containerized with Docker
+This project demonstrates **Retrieval-Augmented Generation (RAG)** — where a language model generates answers grounded in your own documents (e.g., PDFs).
 
 ---
 
-## How to Run Locally
+## 🔍 What is RAG?
 
-### 1️⃣ Clone repo and unzip documents
+Traditional LLMs like ChatGPT can't access custom documents.  
+**RAG solves this** by:
+
+- Reading and chunking your PDFs
+- Embedding and indexing them in a vector database
+- Searching for relevant parts at query time
+- Generating answers based on retrieved content
+
+---
+
+## ✅ Features Implemented
+
+| Feature                        | Description                                |
+|-------------------------------|--------------------------------------------|
+| 📄 Document Parsing           | ✅ via PyMuPDF                              |
+| ✂️ Chunking                   | ✅ using LangChain TextSplitter             |
+| 🧠 Embeddings                 | ✅ HuggingFace `all-MiniLM-L6-v2`           |
+| 📦 Vector Store               | ✅ FAISS                                    |
+| 🤖 Question Answering         | ✅ FLAN-T5-small via HuggingFace            |
+| 💬 Conversational Memory      | ✅ LangChain BufferMemory                   |
+| 🧾 Metadata (page, file)      | ✅ included in responses                    |
+| 🌐 REST API                   | ✅ FastAPI `/chat` endpoint                 |
+| 🧪 Unit Tests                 | ✅ via Pytest                               |
+| 🐳 Dockerfile                 | ✅ included (not executed locally)          |
+
+---
+
+## 🛠️ How to Run Locally
+
+### 1. Clone the repo & install dependencies
 
 ```bash
-git clone https://github.com/your/repo.git
-cd repo
-unzip "RAG assignment documents.zip" -d documents
+git clone https://github.com/Akshita963/RAG-Assignment.git
+cd RAG-Assignment
+python -m venv venv
+venv\Scripts\activate   # Or `source venv/bin/activate` on Linux/Mac
+pip install -r requirements.txt
+
+### 2. Place documents
+Place your PDFs inside the documents/ folder.
+
+### 3. Run the FastAPI server
+uvicorn app.main:app --reload
+
+
+
+
