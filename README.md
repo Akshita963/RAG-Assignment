@@ -48,12 +48,10 @@ pip install -r requirements.txt
 
 ### 2. Place documents
 
-```bash
 Place your PDFs inside the documents/ folder.
 
 ### 3. Run the FastAPI server
 
-```bash
 uvicorn app.main:app --reload
 
 
