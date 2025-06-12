@@ -6,5 +6,5 @@ def test_pipeline_loading():
     assert len(docs) > 0
 
     rag_pipeline.chunk_and_embed(docs)
-    retrieved = rag_pipeline.retrieve_relevant_docs("What is this document about?")
+    retrieved = rag_pipeline.retrieve_relevant_docs("What is SYNOPSIS OF THE STRANGE CASE OF DR. JEKYLL AND MR HYDE is about?")
     assert len(retrieved) > 0
